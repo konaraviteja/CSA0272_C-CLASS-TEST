@@ -1,0 +1,65 @@
+1. //fibonacci series
+#include <stdio.h>
+int main() {
+
+  int i, n;
+  int t1 = 0, t2 = 1;
+  int nextTerm = t1 + t2
+  printf("Enter the number of terms: ");
+  scanf("%d", &n);
+  printf("Fibonacci Series: %d, %d, ", t1, t2);
+  for (i = 3; i <= n; ++i) {
+    printf("%d, ", nextTerm);
+    t1 = t2;
+    t2 = nextTerm;
+    nextTerm = t1 + t2;
+  }
+
+return 0;
+}
+
+2.factorial number
+#include <stdio.h>
+int main() {
+    int n, i;
+    unsigned long long fact = 1;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+
+    // shows error if the user enters a negative integer
+    if (n < 0)
+        printf("Error! Factorial of a negative number doesn't exist.");
+    else {
+        for (i = 1; i <= n; ++i) {
+            fact *= i;
+        }
+        printf("Factorial of %d = %llu", n, fact);
+    }
+
+    return 0;
+}
+
+
+
+3 /*C program to check whether the given number is the Perfect number*/  
+#include<stdio.h>  
+#include<conio.h>  
+void main()  
+{    
+int num, rem, sum = 0, i;  
+printf("Enter a number\n");  
+scanf("%d", &num);       
+for(i = 1; i < num; i++)  
+                     {  
+                              rem = num % i;  
+                             if (rem == 0)  
+                                        {  
+                                               sum = sum + i;  
+                                         }  
+                        }  
+if (sum == num)  
+                      printf(" %d is a Perfect Number");  
+           else  
+                      printf("\n %d is not a Perfect Number");  
+getch();  
+}
